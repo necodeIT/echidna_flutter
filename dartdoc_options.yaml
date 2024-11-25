@@ -2,3 +2,5 @@ dartdoc:
   ignore:
     - "*.g.dart"
     - "*.freezed.dart"
+  linkTo:
+    url: https://necodeit.github.io/%n%/
