@@ -22,7 +22,7 @@ jobs:
         sdk: stable
 
     - name: 📦 Install dependencies
-      run: dart pub get
+      run: flutter pub get
 
     - name: 📝 Generate documentation
       run: dart doc
