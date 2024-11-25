@@ -1,5 +1,5 @@
 library echidna_flutter;
-export 'widgets/widgets.dart';
-export 'screens/screens.dart';
-export 'repositories/repositories.dart';
 export 'guards/guards.dart';
+export 'repositories/repositories.dart';
+export 'screens/screens.dart';
+export 'widgets/widgets.dart';

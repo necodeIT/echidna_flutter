@@ -29,9 +29,6 @@ jobs:
       - name: 📦 Install dependencies
         run: flutter pub get
       
-      - name: 📝 Copy .env.example to .env
-        run: cp .env.example .env
-
       - name: 🧪 Run tests
         run: |
           dart run coverage:test_with_coverage

@@ -1,8 +1,8 @@
 library echidna_flutter;
 
-import 'package:mcquenji_core/mcquenji_core.dart';
-import 'package:echidna_flutter/src/echidna.dart';
 import 'package:dio/dio.dart';
+import 'package:echidna_flutter/src/echidna.dart';
+import 'package:mcquenji_core/mcquenji_core.dart';
 
 /// Signs requests sent to the server.
 abstract class SignatureService extends Service implements Interceptor {
