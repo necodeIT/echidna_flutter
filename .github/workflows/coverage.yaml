@@ -21,24 +21,16 @@ jobs:
         uses: actions/checkout@v4
       
       - name: 🐦 Set up Dart
-        uses: dart-lang/setup-dart@v1
+        uses: flutter-actions/setup-flutter@v3.6
         with:
-          sdk: stable
+          channel: stable
+          version: latest
 
       - name: 📦 Install dependencies
-        run: dart pub get
+        run: flutter pub get
       
       - name: 📝 Copy .env.example to .env
         run: cp .env.example .env
-
-      - name: 🐘 Setup PostgreSQL
-        uses: ikalnytskyi/action-setup-postgres@v6
-
-      - name: 📦 Install Prisma
-        run: npm install prisma -g
-      
-      - name: 🐘 Push database
-        run: prisma db push
 
       - name: 🧪 Run tests
         run: |

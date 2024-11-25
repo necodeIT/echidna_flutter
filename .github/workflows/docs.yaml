@@ -7,14 +7,14 @@ on:
 
 jobs:
   generate-docs:
-    name: 📖 Generate Documentation
+    name: 📚 Generate Documentation
     runs-on: ubuntu-latest
 
     steps:
     - name: 📂 Checkout code
       uses: actions/checkout@v3
 
-    - name: 🛠️ Set up Flutter
+    - name: 🐦 Set up Flutter
       uses: flutter-actions/setup-flutter@v3.6
       with:
         channel: stable

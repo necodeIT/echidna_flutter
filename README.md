@@ -1,6 +1,6 @@
 # Echidna Flutter
 
-Client SDK for [echidna_service](https://github.com/necodeIT/echidna_server). Use this library to verify licenses and features unlocked by them.
+Client SDK for [echidna_server](https://github.com/necodeIT/echidna_server). Use this library to verify licenses and features unlocked by them.
 
 # Installation
 
@@ -35,7 +35,7 @@ For the SDK to work you need to implement a `UserIdRepository` that provides the
 ```dart
 import 'package:echidna_flutter/echidna_flutter.dart';
 
-class MyUserIdRepository implements UserIdRepository {}
+class MyUserIdRepository extends UserIdRepository {}
 ```
 
 You're most likely going to connect this to your preexisting user management system.
@@ -43,7 +43,7 @@ You're most likely going to connect this to your preexisting user management sys
 ```dart
 import 'package:echidna_flutter/echidna_flutter.dart';
 
-class MyUserIdRepository implements UserIdRepository {
+class MyUserIdRepository extends UserIdRepository {
   final UserRepository _user;
 
   MyUserIdRepository(this._user) {
