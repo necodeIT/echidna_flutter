@@ -81,7 +81,7 @@
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">void initializeLicenseRepo(Function userIdRepositoryConstructor) {
   addRepository&lt;UserIdRepository&gt;(userIdRepositoryConstructor);
-  addRepository(LicenseRepository.new);
+  addRepository&lt;LicenseRepository&gt;(LicenseRepository.new);
 }</code></pre>
 </section>
 
