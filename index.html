@@ -70,8 +70,47 @@ void main() {
     runApp(MyApp());
 }
 </code></pre>
+<h2 id="implement-useridrepository">Implement UserIdRepository</h2>
+<p>For the SDK to work you need to implement a <code>UserIdRepository</code> that provides the current user id.</p>
+<pre class="language-dart"><code class="language-dart">import 'package:echidna_flutter/echidna_flutter.dart';
+
+class MyUserIdRepository implements UserIdRepository {}
+</code></pre>
+<p>You're most likely going to connect this to your preexisting user management system.</p>
+<pre class="language-dart"><code class="language-dart">import 'package:echidna_flutter/echidna_flutter.dart';
+
+class MyUserIdRepository implements UserIdRepository {
+  final UserRepository _user;
+
+  MyUserIdRepository(this._user) {
+    watchAsync(_user);
+  }
+
+  @override
+  FutureOr&lt;void&gt; build(Type trigger){
+    data(_user.id);
+  }
+}
+</code></pre>
+<h2 id="initialize-licenserepository">Initialize LicenseRepository</h2>
+<p>You also need to initialize the <code>LicenseRepository</code> with the <code>UserIdRepository</code> you just implemented (most likely in your auth module).</p>
+<pre class="language-dart"><code class="language-dart">import 'package:echidna_flutter/echidna_flutter.dart';
+
+class MyAuthModule extends Module {
+  @override
+  List&lt;Module&gt; get imports =&gt; [
+    EchidnaModule(),
+  ];
+
+  @override
+  void binds(Injector i) {
+    // add your other bindings here
+    i.initializeLicenseRepo(MyUserIdRepository.new); // this should be called last
+  }
+}
+</code></pre>
 <h2 id="use-the-sdk">Use the SDK</h2>
-<p>You now can use the SDK to verify licenses and features unlocked by them.</p>
+<p>Finally, you now can use the SDK to verify licenses and features unlocked by them.</p>
 <pre class="language-dart"><code class="language-dart">import 'package:echidna_flutter/echidna_flutter.dart';
 
 class MyFeature extends Module {}
@@ -79,7 +118,7 @@ class MyFeature extends Module {}
 class AppModule extends Module {
   @override
   void routes(RouteManager r){
-    r.module('/my-feature', module: MyFeature(), g);
+    r.module('/my-feature', module: MyFeature(), guards: [FeatureGuard(myFeatureId)]);
   }
 }
 </code></pre>
