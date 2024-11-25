@@ -52,7 +52,7 @@
       
 <section class="desc markdown">
   <h1 id="echidna-flutter">Echidna Flutter</h1>
-<p>Client SDK for <a href="https://github.com/necodeIT/echidna_server">echidna_service</a>. Use this library to verify licenses and features unlocked by them.</p>
+<p>Client SDK for <a href="https://github.com/necodeIT/echidna_server">echidna_server</a>. Use this library to verify licenses and features unlocked by them.</p>
 <h1 id="installation">Installation</h1>
 <h2 id="add-dependency-to-your-project">Add dependency to your project</h2>
 <p>To get started add the following dependency to your <code>pubspec.yaml</code> file:</p>
@@ -74,12 +74,12 @@ void main() {
 <p>For the SDK to work you need to implement a <code>UserIdRepository</code> that provides the current user id.</p>
 <pre class="language-dart"><code class="language-dart">import 'package:echidna_flutter/echidna_flutter.dart';
 
-class MyUserIdRepository implements UserIdRepository {}
+class MyUserIdRepository extends UserIdRepository {}
 </code></pre>
 <p>You're most likely going to connect this to your preexisting user management system.</p>
 <pre class="language-dart"><code class="language-dart">import 'package:echidna_flutter/echidna_flutter.dart';
 
-class MyUserIdRepository implements UserIdRepository {
+class MyUserIdRepository extends UserIdRepository {
   final UserRepository _user;
 
   MyUserIdRepository(this._user) {
@@ -132,189 +132,7 @@ class AppModule extends Module {
   <span class="name"><a href="echidna_flutter/echidna_flutter-library.html">echidna_flutter</a></span> 
 
 </dt>
-<dd>
-</dd>
-
-          <dt id="datasources">
-  <span class="name"><a href="modules_echidna_domain_datasources_datasources/modules_echidna_domain_datasources_datasources-library.html">modules/echidna/domain/datasources/datasources</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="license_status_datasource">
-  <span class="name"><a href="modules_echidna_domain_datasources_license_status_datasource/modules_echidna_domain_datasources_license_status_datasource-library.html">modules/echidna/domain/datasources/license_status_datasource</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="domain">
-  <span class="name"><a href="modules_echidna_domain_domain/modules_echidna_domain_domain-library.html">modules/echidna/domain/domain</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="echidna_config">
-  <span class="name"><a href="modules_echidna_domain_models_echidna_config/modules_echidna_domain_models_echidna_config-library.html">modules/echidna/domain/models/echidna_config</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="models">
-  <span class="name"><a href="modules_echidna_domain_models_models/modules_echidna_domain_models_models-library.html">modules/echidna/domain/models/models</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="user_id">
-  <span class="name"><a href="modules_echidna_domain_models_user_id/modules_echidna_domain_models_user_id-library.html">modules/echidna/domain/models/user_id</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="echidna_api_service">
-  <span class="name"><a href="modules_echidna_domain_services_echidna_api_service/modules_echidna_domain_services_echidna_api_service-library.html">modules/echidna/domain/services/echidna_api_service</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="services">
-  <span class="name"><a href="modules_echidna_domain_services_services/modules_echidna_domain_services_services-library.html">modules/echidna/domain/services/services</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="signature_service">
-  <span class="name"><a href="modules_echidna_domain_services_signature_service/modules_echidna_domain_services_signature_service-library.html">modules/echidna/domain/services/signature_service</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="echidna">
-  <span class="name"><a href="modules_echidna_echidna/modules_echidna_echidna-library.html">modules/echidna/echidna</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="datasources">
-  <span class="name"><a href="modules_echidna_infra_datasources_datasources/modules_echidna_infra_datasources_datasources-library.html">modules/echidna/infra/datasources/datasources</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="std_license_status_datasource">
-  <span class="name"><a href="modules_echidna_infra_datasources_std_license_status_datasource/modules_echidna_infra_datasources_std_license_status_datasource-library.html">modules/echidna/infra/datasources/std_license_status_datasource</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="infra">
-  <span class="name"><a href="modules_echidna_infra_infra/modules_echidna_infra_infra-library.html">modules/echidna/infra/infra</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="hmac_signature_service">
-  <span class="name"><a href="modules_echidna_infra_services_hmac_signature_service/modules_echidna_infra_services_hmac_signature_service-library.html">modules/echidna/infra/services/hmac_signature_service</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="services">
-  <span class="name"><a href="modules_echidna_infra_services_services/modules_echidna_infra_services_services-library.html">modules/echidna/infra/services/services</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="std_echidna_api_service">
-  <span class="name"><a href="modules_echidna_infra_services_std_echidna_api_service/modules_echidna_infra_services_std_echidna_api_service-library.html">modules/echidna/infra/services/std_echidna_api_service</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="feature_guard">
-  <span class="name"><a href="modules_echidna_presentation_guards_feature_guard/modules_echidna_presentation_guards_feature_guard-library.html">modules/echidna/presentation/guards/feature_guard</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="guards">
-  <span class="name"><a href="modules_echidna_presentation_guards_guards/modules_echidna_presentation_guards_guards-library.html">modules/echidna/presentation/guards/guards</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="presentation">
-  <span class="name"><a href="modules_echidna_presentation_presentation/modules_echidna_presentation_presentation-library.html">modules/echidna/presentation/presentation</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="license_repository">
-  <span class="name"><a href="modules_echidna_presentation_repositories_license_repository/modules_echidna_presentation_repositories_license_repository-library.html">modules/echidna/presentation/repositories/license_repository</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="repositories">
-  <span class="name"><a href="modules_echidna_presentation_repositories_repositories/modules_echidna_presentation_repositories_repositories-library.html">modules/echidna/presentation/repositories/repositories</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="user_id_repository">
-  <span class="name"><a href="modules_echidna_presentation_repositories_user_id_repository/modules_echidna_presentation_repositories_user_id_repository-library.html">modules/echidna/presentation/repositories/user_id_repository</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="screens">
-  <span class="name"><a href="modules_echidna_presentation_screens_screens/modules_echidna_presentation_screens_screens-library.html">modules/echidna/presentation/screens/screens</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="widgets">
-  <span class="name"><a href="modules_echidna_presentation_widgets_widgets/modules_echidna_presentation_widgets_widgets-library.html">modules/echidna/presentation/widgets/widgets</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="license_repo_utils">
-  <span class="name"><a href="modules_echidna_utils_license_repo_utils/modules_echidna_utils_license_repo_utils-library.html">modules/echidna/utils/license_repo_utils</a></span> 
-
-</dt>
-<dd>
-</dd>
-
-          <dt id="utils">
-  <span class="name"><a href="modules_echidna_utils_utils/modules_echidna_utils_utils-library.html">modules/echidna/utils/utils</a></span> 
-
-</dt>
-<dd>
+<dd>Echidna Flutter
 </dd>
 
         </dl>
@@ -339,32 +157,6 @@ class AppModule extends Module {
     <ol>
       <li class="section-title">Libraries</li>
       <li><a href="echidna_flutter/echidna_flutter-library.html">echidna_flutter</a></li>
-      <li><a href="modules_echidna_domain_datasources_datasources/modules_echidna_domain_datasources_datasources-library.html">modules/echidna/domain/datasources/datasources</a></li>
-      <li><a href="modules_echidna_domain_datasources_license_status_datasource/modules_echidna_domain_datasources_license_status_datasource-library.html">modules/echidna/domain/datasources/license_status_datasource</a></li>
-      <li><a href="modules_echidna_domain_domain/modules_echidna_domain_domain-library.html">modules/echidna/domain/domain</a></li>
-      <li><a href="modules_echidna_domain_models_echidna_config/modules_echidna_domain_models_echidna_config-library.html">modules/echidna/domain/models/echidna_config</a></li>
-      <li><a href="modules_echidna_domain_models_models/modules_echidna_domain_models_models-library.html">modules/echidna/domain/models/models</a></li>
-      <li><a href="modules_echidna_domain_models_user_id/modules_echidna_domain_models_user_id-library.html">modules/echidna/domain/models/user_id</a></li>
-      <li><a href="modules_echidna_domain_services_echidna_api_service/modules_echidna_domain_services_echidna_api_service-library.html">modules/echidna/domain/services/echidna_api_service</a></li>
-      <li><a href="modules_echidna_domain_services_services/modules_echidna_domain_services_services-library.html">modules/echidna/domain/services/services</a></li>
-      <li><a href="modules_echidna_domain_services_signature_service/modules_echidna_domain_services_signature_service-library.html">modules/echidna/domain/services/signature_service</a></li>
-      <li><a href="modules_echidna_echidna/modules_echidna_echidna-library.html">modules/echidna/echidna</a></li>
-      <li><a href="modules_echidna_infra_datasources_datasources/modules_echidna_infra_datasources_datasources-library.html">modules/echidna/infra/datasources/datasources</a></li>
-      <li><a href="modules_echidna_infra_datasources_std_license_status_datasource/modules_echidna_infra_datasources_std_license_status_datasource-library.html">modules/echidna/infra/datasources/std_license_status_datasource</a></li>
-      <li><a href="modules_echidna_infra_infra/modules_echidna_infra_infra-library.html">modules/echidna/infra/infra</a></li>
-      <li><a href="modules_echidna_infra_services_hmac_signature_service/modules_echidna_infra_services_hmac_signature_service-library.html">modules/echidna/infra/services/hmac_signature_service</a></li>
-      <li><a href="modules_echidna_infra_services_services/modules_echidna_infra_services_services-library.html">modules/echidna/infra/services/services</a></li>
-      <li><a href="modules_echidna_infra_services_std_echidna_api_service/modules_echidna_infra_services_std_echidna_api_service-library.html">modules/echidna/infra/services/std_echidna_api_service</a></li>
-      <li><a href="modules_echidna_presentation_guards_feature_guard/modules_echidna_presentation_guards_feature_guard-library.html">modules/echidna/presentation/guards/feature_guard</a></li>
-      <li><a href="modules_echidna_presentation_guards_guards/modules_echidna_presentation_guards_guards-library.html">modules/echidna/presentation/guards/guards</a></li>
-      <li><a href="modules_echidna_presentation_presentation/modules_echidna_presentation_presentation-library.html">modules/echidna/presentation/presentation</a></li>
-      <li><a href="modules_echidna_presentation_repositories_license_repository/modules_echidna_presentation_repositories_license_repository-library.html">modules/echidna/presentation/repositories/license_repository</a></li>
-      <li><a href="modules_echidna_presentation_repositories_repositories/modules_echidna_presentation_repositories_repositories-library.html">modules/echidna/presentation/repositories/repositories</a></li>
-      <li><a href="modules_echidna_presentation_repositories_user_id_repository/modules_echidna_presentation_repositories_user_id_repository-library.html">modules/echidna/presentation/repositories/user_id_repository</a></li>
-      <li><a href="modules_echidna_presentation_screens_screens/modules_echidna_presentation_screens_screens-library.html">modules/echidna/presentation/screens/screens</a></li>
-      <li><a href="modules_echidna_presentation_widgets_widgets/modules_echidna_presentation_widgets_widgets-library.html">modules/echidna/presentation/widgets/widgets</a></li>
-      <li><a href="modules_echidna_utils_license_repo_utils/modules_echidna_utils_license_repo_utils-library.html">modules/echidna/utils/license_repo_utils</a></li>
-      <li><a href="modules_echidna_utils_utils/modules_echidna_utils_utils-library.html">modules/echidna/utils/utils</a></li>
 </ol>
 
   </div>
