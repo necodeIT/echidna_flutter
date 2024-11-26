@@ -21,11 +21,9 @@ class FeatureGuard extends RouteGuard {
       return false;
     }
 
-    if (!license.requireData.active) {
-      return false;
-    }
+    final unlockedFeatures = license.requireData.featureClaims.map((c) => c.feature.id);
 
-    if (!license.requireData.featureClaims.every(features.contains)) {
+    if (!features.every(unlockedFeatures.contains)) {
       return false;
     }
 
