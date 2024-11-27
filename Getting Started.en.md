@@ -17,7 +17,7 @@ Call the `initializeEchidnaApi` method in your main method before running the ap
 import 'package:echidna_flutter/echidna_flutter.dart';
 
 void main() {
-    initializeEchidnaApi(baseUrl: 'https://echidna.your.domain', clientKey: 'your-client-key'; clientId: your-client-id);
+    initializeEchidnaApi(baseUrl: '<domain>', clientKey: '<client-key>'; clientId: <client-id>);
     runApp(MyApp());
 }
 ```
