@@ -24,9 +24,9 @@ dependencies:
     git:
       url: https://github.com/mcquenji/mcquenji_core.git
 
-# dependency_overrides:
-#   echidna_dto:
-#     path: ../echidna_dto
+  # dependency_overrides:
+  #   echidna_dto:
+  #     path: ../echidna_dto
 
   dio: any
   crypto: any

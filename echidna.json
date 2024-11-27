@@ -1,0 +1,8 @@
+{
+  "$schema": "https://raw.githubusercontent.com/necodeIT/echidna_webui/refs/heads/main/echidna.schema.json",
+  "name": "Flutter Modular",
+  "framework": "flutter",
+  "gettingStarted": {
+    "en": "https://raw.githubusercontent.com/necodeIT/echidna_flutter/Getting-Started.en.md"
+  }
+}
