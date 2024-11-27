@@ -28,9 +28,9 @@ void main() {
 }
 ```
 
-- *<domain>*: The domain of the Echidna server.
-- *<client-key>*: The client key to authorize the client on the Echidna server.
-- *<client-id>*: The client id to identify the client on the Echidna server.
+- `<domain>`: The domain of the Echidna server.
+- `<client-key>`: The client key to authorize the client on the Echidna server.
+- `<client-id>`: The client id to identify the client on the Echidna server.
 
 ## Implement UserIdRepository
 
