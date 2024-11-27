@@ -22,6 +22,10 @@ void main() {
 }
 ```
 
+- `<domain>`: The domain of the Echidna server.
+- `<client-key>`: The client key to authorize the client on the Echidna server.
+- `<client-id>`: The client id to identify the client on the Echidna server.
+
 # Implement UserIdRepository
 
 For the SDK to work you need to implement a `UserIdRepository` that provides the current user id.
