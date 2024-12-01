@@ -1,4 +1,5 @@
 library echidna_flutter;
+
 import 'package:echidna_dto/echidna_dto.dart';
 import 'package:mcquenji_core/mcquenji_core.dart';
 
