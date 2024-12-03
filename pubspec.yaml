@@ -11,6 +11,8 @@ environment:
 dependencies:
   bloc: ^8.1.4
   collection: ^1.18.0
+  crypto: any
+  dio: any
   echidna_dto:
     git:
       url: https://github.com/necodeIT/echidna_dto.git
@@ -24,12 +26,12 @@ dependencies:
     git:
       url: https://github.com/mcquenji/mcquenji_core.git
 
-  # dependency_overrides:
-  #   echidna_dto:
-  #     path: ../echidna_dto
+dependency_overrides:
+  flutter_modular:
+    git:
+      url: https://github.com/necodeIT/modular.git
+      path: flutter_modular
 
-  dio: any
-  crypto: any
 dev_dependencies:
   architecture_linter: ^0.2.2
   build_runner: ^2.4.11
@@ -40,5 +42,5 @@ dev_dependencies:
   flutterando_analysis: ^0.0.2
   freezed: ^2.5.2
   json_serializable: ^6.8.0
-  test: ^1.25.2
   logging: any
+  test: ^1.25.2
