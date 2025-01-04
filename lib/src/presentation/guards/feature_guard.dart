@@ -1,9 +1,12 @@
 library echidna_flutter;
 
 import 'package:echidna_flutter/src/echidna.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 /// Guards access to a route based on the user's license.
+///
+/// If [kDebugMode] is true, this guard will always return true.
 class FeatureGuard extends RouteGuard {
   /// The ids of features that must be unlocked by the user's license.
   ///
@@ -11,10 +14,14 @@ class FeatureGuard extends RouteGuard {
   final List<int> features;
 
   /// Guards access to a route based on the user's license.
+  ///
+  /// If [kDebugMode] is true, this guard will always return true.
   FeatureGuard(this.features);
 
   @override
   Future<bool> canActivate(String path, ModularRoute route) async {
+    if (kDebugMode) return true;
+
     final license = Modular.get<LicenseRepository>().state;
 
     if (!license.hasData) {
