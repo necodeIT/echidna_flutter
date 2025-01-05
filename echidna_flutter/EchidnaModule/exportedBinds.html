@@ -79,6 +79,7 @@
 void exportedBinds(Injector i) {
   i
     ..add&lt;EchidnaConfig&gt;(() =&gt; EchidnaConfig.instance)
+    ..add&lt;SignatureService&gt;(HmacSignatureService.new)
     ..add&lt;EchidnaApiService&gt;(StdEchidnaApiService.new)
     ..add&lt;LicenseStatusDatasource&gt;(StdLicenseStatusDatasource.new);
 }</code></pre>
