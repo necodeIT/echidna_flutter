@@ -1,4 +1,5 @@
 library echidna_flutter;
+
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mcquenji_core/mcquenji_core.dart';
 
@@ -59,6 +60,7 @@ class EchidnaModule extends Module {
   void exportedBinds(Injector i) {
     i
       ..add<EchidnaConfig>(() => EchidnaConfig.instance)
+      ..add<SignatureService>(HmacSignatureService.new)
       ..add<EchidnaApiService>(StdEchidnaApiService.new)
       ..add<LicenseStatusDatasource>(StdLicenseStatusDatasource.new);
   }
