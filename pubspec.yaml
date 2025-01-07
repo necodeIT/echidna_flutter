@@ -1,6 +1,6 @@
 name: echidna_flutter
 description: "Echidna client SDK for flutter applications"
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/necodeIT/echidna_flutter.git
 publish_to: none
 
