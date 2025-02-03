@@ -16,7 +16,7 @@ class FeatureGuard extends RouteGuard {
   /// Guards access to a route based on the user's license.
   ///
   /// If [kDebugMode] is true, this guard will always return true.
-  FeatureGuard(this.features);
+  FeatureGuard(this.features, {super.redirectTo});
 
   @override
   Future<bool> canActivate(String path, ModularRoute route) async {

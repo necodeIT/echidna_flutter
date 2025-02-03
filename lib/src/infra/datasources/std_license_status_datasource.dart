@@ -12,6 +12,7 @@ class StdLicenseStatusDatasource extends LicenseStatusDatasource {
 
   @override
   void dispose() {
+    super.dispose();
     _api.dispose();
   }
 

@@ -18,7 +18,7 @@ class LicenseRepository extends Repository<AsyncValue<LicenseStatus>> {
   }
 
   @override
-  FutureOr<void> build(Type trigger) async {
+  FutureOr<void> build(BuildTrigger trigger) async {
     if (kDebugMode) {
       log('Debug mode: skipping license status check');
 

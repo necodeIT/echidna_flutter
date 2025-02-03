@@ -9,9 +9,6 @@ import 'package:echidna_flutter/src/echidna.dart';
 /// Hmac implementation of [SignatureService].
 class HmacSignatureService extends SignatureService {
   @override
-  void dispose() {}
-
-  @override
   String sign(String body) {
     return Hmac(
       sha256,

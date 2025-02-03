@@ -19,6 +19,7 @@ class StdEchidnaApiService extends EchidnaApiService {
 
   @override
   void dispose() {
+    super.dispose();
     _networkService.dispose();
     _signatureService.dispose();
   }
