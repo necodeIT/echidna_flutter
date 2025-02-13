@@ -25,7 +25,7 @@
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">echidna_flutter</a></li>
-    <li><a href="../../echidna_flutter/echidna_flutter-library.html">echidna_flutter.dart</a></li>
+    <li><a href="../../echidna_flutter">echidna_flutter.dart</a></li>
     <li><a href="../../echidna_flutter/SignatureService-class.html">SignatureService</a></li>
     <li class="self-crumb">onRequest method</li>
   </ol>
@@ -84,7 +84,7 @@ void onRequest(
   RequestOptions options,
   RequestInterceptorHandler handler,
 ) {
-  options.headers[&#39;x-signature&#39;] = sign(options.data.toString());
+  options.headers[&#39;x-signature&#39;] = sign(jsonEncode(options.data));
   options.headers[&#39;client-id&#39;] = EchidnaConfig.instance.clientId;
 
   handler.next(options);
@@ -102,7 +102,7 @@ void onRequest(
 </header>
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">echidna_flutter</a></li>
-    <li><a href="../../echidna_flutter/echidna_flutter-library.html">echidna_flutter</a></li>
+    <li><a href="../../echidna_flutter">echidna_flutter</a></li>
     <li><a href="../../echidna_flutter/SignatureService-class.html">SignatureService</a></li>
     <li class="self-crumb">onRequest method</li>
 </ol>

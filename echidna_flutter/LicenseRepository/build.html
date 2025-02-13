@@ -25,7 +25,7 @@
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">echidna_flutter</a></li>
-    <li><a href="../../echidna_flutter/echidna_flutter-library.html">echidna_flutter.dart</a></li>
+    <li><a href="../../echidna_flutter">echidna_flutter.dart</a></li>
     <li><a href="../../echidna_flutter/LicenseRepository-class.html">LicenseRepository</a></li>
     <li class="self-crumb">build method</li>
   </ol>
@@ -128,7 +128,7 @@ FutureOr&lt;void&gt; build(BuildTrigger trigger) async {
     return;
   }
 
-  final userId = _userId.state.requireData.userId;
+  final userId = waitForData(_userId).userId;
 
   log(&#39;Getting license status for user $userId&#39;);
 
@@ -151,7 +151,7 @@ FutureOr&lt;void&gt; build(BuildTrigger trigger) async {
 </header>
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">echidna_flutter</a></li>
-    <li><a href="../../echidna_flutter/echidna_flutter-library.html">echidna_flutter</a></li>
+    <li><a href="../../echidna_flutter">echidna_flutter</a></li>
     <li><a href="../../echidna_flutter/LicenseRepository-class.html">LicenseRepository</a></li>
     <li class="self-crumb">build method</li>
 </ol>

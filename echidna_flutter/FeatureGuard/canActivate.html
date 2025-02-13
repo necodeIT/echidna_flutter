@@ -25,7 +25,7 @@
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">echidna_flutter</a></li>
-    <li><a href="../../echidna_flutter/echidna_flutter-library.html">echidna_flutter.dart</a></li>
+    <li><a href="../../echidna_flutter">echidna_flutter.dart</a></li>
     <li><a href="../../echidna_flutter/FeatureGuard-class.html">FeatureGuard</a></li>
     <li class="self-crumb">canActivate method</li>
   </ol>
@@ -87,13 +87,15 @@ be thrown <code>GuardedRouteException</code>.</bool></p>
 Future&lt;bool&gt; canActivate(String path, ModularRoute route) async {
   if (kDebugMode) return true;
 
-  final license = Modular.get&lt;LicenseRepository&gt;().state;
+  final license = Modular.get&lt;LicenseRepository&gt;();
 
-  if (!license.hasData) {
+  await license.ready;
+
+  if (!license.state.hasData) {
     return false;
   }
 
-  final unlockedFeatures = license.requireData.featureClaims.map((c) =&gt; c.feature.id);
+  final unlockedFeatures = license.state.requireData.featureClaims.map((c) =&gt; c.feature.id);
 
   if (!features.every(unlockedFeatures.contains)) {
     return false;
@@ -114,7 +116,7 @@ Future&lt;bool&gt; canActivate(String path, ModularRoute route) async {
 </header>
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">echidna_flutter</a></li>
-    <li><a href="../../echidna_flutter/echidna_flutter-library.html">echidna_flutter</a></li>
+    <li><a href="../../echidna_flutter">echidna_flutter</a></li>
     <li><a href="../../echidna_flutter/FeatureGuard-class.html">FeatureGuard</a></li>
     <li class="self-crumb">canActivate method</li>
 </ol>

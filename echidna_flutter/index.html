@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="echidna_flutter API docs, for the Dart programming language.">
-  <title>echidna_flutter - Dart API docs</title>
+  <meta name="description" content="echidna_flutter library API docs, for the Dart programming language.">
+  <title>echidna_flutter library - Dart API</title>
 
 
   
@@ -13,18 +13,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
   
-  <link rel="stylesheet" href="static-assets/github.css?v1">
-  <link rel="stylesheet" href="static-assets/styles.css?v1">
-  <link rel="icon" href="static-assets/favicon.png?v1">
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
   
 </head>
 
-<body data-base-href="" data-using-base-href="false" class="light-theme">
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
 <div id="overlay-under-drawer"></div>
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
-    <li class="self-crumb">echidna_flutter package</li>
+    <li><a href="../index.html">echidna_flutter</a></li>
+    <li class="self-crumb">echidna_flutter.dart</li>
   </ol>
   <div class="self-name">echidna_flutter</div>
   <form class="search navbar-right" role="search">
@@ -43,8 +44,24 @@
   </div>
 </header>
 <main>
-  <div id="dartdoc-main-content" class="main-content">
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar=""
+    data-below-sidebar="echidna_flutter&#47;echidna_flutter-library-sidebar.html">
+  
+    <div>
       
+
+      <h1>
+        <span class="kind-library">echidna_flutter</span>
+        library 
+ 
+
+      </h1>
+    </div>
+
+    
 <section class="desc markdown">
   <h1 id="echidna-flutter">Echidna Flutter</h1>
 <p>Client SDK for <a href="https://github.com/necodeIT/echidna_server">echidna_server</a>. Use this library to verify licenses and features unlocked by them.</p>
@@ -65,11 +82,6 @@ void main() {
     runApp(MyApp());
 }
 </code></pre>
-<ul>
-<li><code>&lt;domain&gt;</code>: The domain of the Echidna server.</li>
-<li><code>&lt;client-key&gt;</code>: The client key to authorize the client on the Echidna server.</li>
-<li><code>&lt;client-id&gt;</code>: The client id to identify the client on the Echidna server.</li>
-</ul>
 <h2 id="implement-useridrepository">Implement UserIdRepository</h2>
 <p>For the SDK to work you need to implement a <code>UserIdRepository</code> that provides the current user id.</p>
 <pre class="language-dart"><code class="language-dart">import 'package:echidna_flutter/echidna_flutter.dart';
@@ -125,18 +137,125 @@ class AppModule extends Module {
 </section>
 
 
-      <section class="summary">
-          <h2>Libraries</h2>
-        <dl>
-          <dt id="echidna_flutter">
-  <span class="name"><a href="echidna_flutter">echidna_flutter</a></span> 
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+      <dl>
+          <dt id="EchidnaApiService">
+  <span class="name "><a href="../echidna_flutter/EchidnaApiService-class.html">EchidnaApiService</a></span> 
 
 </dt>
-<dd>Echidna Flutter
+<dd>
+  Handles communication with the Echidna API.
 </dd>
 
-        </dl>
-      </section>
+          <dt id="EchidnaConfig">
+  <span class="name "><a href="../echidna_flutter/EchidnaConfig-class.html">EchidnaConfig</a></span> 
+
+</dt>
+<dd>
+  Configuration for the Echidna API.
+</dd>
+
+          <dt id="EchidnaModule">
+  <span class="name "><a href="../echidna_flutter/EchidnaModule-class.html">EchidnaModule</a></span> 
+
+</dt>
+<dd>
+  Module for using the echidna client sdk.
+</dd>
+
+          <dt id="FeatureGuard">
+  <span class="name "><a href="../echidna_flutter/FeatureGuard-class.html">FeatureGuard</a></span> 
+
+</dt>
+<dd>
+  Guards access to a route based on the user's license.
+</dd>
+
+          <dt id="LicenseRepository">
+  <span class="name "><a href="../echidna_flutter/LicenseRepository-class.html">LicenseRepository</a></span> 
+
+</dt>
+<dd>
+  Holds the license status for the current user.
+</dd>
+
+          <dt id="LicenseStatusDatasource">
+  <span class="name "><a href="../echidna_flutter/LicenseStatusDatasource-class.html">LicenseStatusDatasource</a></span> 
+
+</dt>
+<dd>
+  Datasource for getting the license status.
+</dd>
+
+          <dt id="SignatureService">
+  <span class="name "><a href="../echidna_flutter/SignatureService-class.html">SignatureService</a></span> 
+
+</dt>
+<dd>
+  Signs requests sent to the server.
+</dd>
+
+          <dt id="UserID">
+  <span class="name "><a href="../echidna_flutter/UserID-class.html">UserID</a></span> 
+
+</dt>
+<dd>
+  Wrapper class for a user ID.
+</dd>
+
+          <dt id="UserIdRepository">
+  <span class="name "><a href="../echidna_flutter/UserIdRepository-class.html">UserIdRepository</a></span> 
+
+</dt>
+<dd>
+  Holds the user ID for the current user.
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+    <section class="summary offset-anchor" id="extensions">
+      <h2>Extensions</h2>
+      <dl>
+          <dt id="LicenseRepoX">
+  <span class="name "><a href="../echidna_flutter/LicenseRepoX.html">LicenseRepoX</a></span>
+  on <a href="https://pub.dev/documentation/auto_injector/2.0.5/auto_injector/Injector-class.html">Injector</a>
+  
+
+</dt>
+<dd>
+  Injects the license repository.
+</dd>
+
+      </dl>
+    </section>
+
+
+
+    <section class="summary offset-anchor" id="functions">
+      <h2>Functions</h2>
+      <dl class="callables">
+          <dt id="initializeEchidnaApi" class="callable">
+  <span class="name"><a href="../echidna_flutter/initializeEchidnaApi.html">initializeEchidnaApi</a></span><span class="signature">(<wbr>{<span class="parameter" id="initializeEchidnaApi-param-baseUrl"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">baseUrl</span>, </span><span class="parameter" id="initializeEchidnaApi-param-clientKey"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">clientKey</span>, </span><span class="parameter" id="initializeEchidnaApi-param-clientId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">clientId</span></span>})
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Initializes the Echidna API with the given <code>baseUrl</code> and <code>clientKey</code>.
+  
+
+</dd>
+
+      </dl>
+    </section>
+
+
   </div> <!-- /.main-content -->
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
@@ -146,18 +265,20 @@ class AppModule extends Module {
   </form>
 </header>
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-    <li class="self-crumb">echidna_flutter package</li>
+    <li><a href="../index.html">echidna_flutter</a></li>
+    <li class="self-crumb">echidna_flutter.dart</li>
 </ol>
 
-    <h5 class="hidden-xs"><span class="package-name">echidna_flutter</span> <span class="package-kind">package</span></h5>
+    <h5><span class="package-name">echidna_flutter</span> <span class="package-kind">package</span></h5>
     <ol>
       <li class="section-title">Libraries</li>
-      <li><a href="echidna_flutter">echidna_flutter</a></li>
+      <li><a href="../echidna_flutter">echidna_flutter</a></li>
 </ol>
 
   </div>
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
-  </div>
+    <h5>echidna_flutter library</h5>
+  </div><!--/sidebar-offcanvas-right-->
 </main>
 <footer>
   <span class="no-break">
@@ -168,8 +289,8 @@ class AppModule extends Module {
 </footer>
 
 
-<script src="static-assets/highlight.pack.js?v1"></script>
-<script src="static-assets/docs.dart.js"></script>
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
 
 </body>
 </html>
