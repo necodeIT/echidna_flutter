@@ -35,7 +35,7 @@ class LicenseRepository extends Repository<AsyncValue<LicenseStatus>> {
       return;
     }
 
-    final userId = _userId.state.requireData.userId;
+    final userId = waitForData(_userId).userId;
 
     log('Getting license status for user $userId');
 

@@ -22,13 +22,15 @@ class FeatureGuard extends RouteGuard {
   Future<bool> canActivate(String path, ModularRoute route) async {
     if (kDebugMode) return true;
 
-    final license = Modular.get<LicenseRepository>().state;
+    final license = Modular.get<LicenseRepository>();
 
-    if (!license.hasData) {
+    await license.ready;
+
+    if (!license.state.hasData) {
       return false;
     }
 
-    final unlockedFeatures = license.requireData.featureClaims.map((c) => c.feature.id);
+    final unlockedFeatures = license.state.requireData.featureClaims.map((c) => c.feature.id);
 
     if (!features.every(unlockedFeatures.contains)) {
       return false;

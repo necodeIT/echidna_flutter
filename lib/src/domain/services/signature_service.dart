@@ -1,5 +1,7 @@
 library echidna_flutter;
 
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:echidna_flutter/src/echidna.dart';
 import 'package:mcquenji_core/mcquenji_core.dart';
@@ -20,7 +22,7 @@ abstract class SignatureService extends Service implements Interceptor {
     RequestOptions options,
     RequestInterceptorHandler handler,
   ) {
-    options.headers['x-signature'] = sign(options.data.toString());
+    options.headers['x-signature'] = sign(jsonEncode(options.data));
     options.headers['client-id'] = EchidnaConfig.instance.clientId;
 
     handler.next(options);

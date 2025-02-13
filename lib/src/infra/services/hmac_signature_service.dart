@@ -24,7 +24,8 @@ class HmacSignatureService extends SignatureService {
       return false;
     }
 
-    final body = response.data.toString();
+    final body = jsonEncode(response.data);
+
     return signature == sign(body);
   }
 }
